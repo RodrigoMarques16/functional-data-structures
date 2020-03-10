@@ -20,6 +20,8 @@ description:         Please see the README on GitHub at <https://github.com/Rodr
 dependencies:
 - base >= 4.7 && < 5
 - gloss >= 1.13
+- haskeline >= 0.7
+- mtl
 
 library:
   source-dirs: src

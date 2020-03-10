@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4c5115347249b725ee2fbf1e3a7af17b9a3fb03f8af5d8f779dd6a8b5c27f0b4
+-- hash: 075a0d242622943657f8cf8440c31dee494f78a89106ea6abb61447e4cca45e2
 
 name:           functional-data-structures
 version:        0.1.0.0
@@ -27,6 +27,8 @@ source-repository head
 library
   exposed-modules:
       BSTree
+      RBTree
+      RBTreeDraw
   other-modules:
       Paths_functional_data_structures
   hs-source-dirs:
@@ -34,6 +36,8 @@ library
   build-depends:
       base >=4.7 && <5
     , gloss >=1.13
+    , haskeline >=0.7
+    , mtl
   default-language: Haskell2010
 
 executable functional-data-structures-exe
@@ -47,6 +51,8 @@ executable functional-data-structures-exe
       base >=4.7 && <5
     , functional-data-structures
     , gloss >=1.13
+    , haskeline >=0.7
+    , mtl
   default-language: Haskell2010
 
 test-suite functional-data-structures-test
@@ -61,4 +67,6 @@ test-suite functional-data-structures-test
       base >=4.7 && <5
     , functional-data-structures
     , gloss >=1.13
+    , haskeline >=0.7
+    , mtl
   default-language: Haskell2010
