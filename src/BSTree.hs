@@ -1,5 +1,7 @@
 module BSTree where
 
+-- First implementation, unused
+
 data BSTree a = Empty | Branch a (BSTree a) (BSTree a) deriving (Show)
 
 empty :: Ord a => BSTree a
@@ -18,13 +20,6 @@ pair a = insert (Branch a Empty Empty)
 height :: BSTree a -> Int
 height Empty = 0
 height (Branch _ left right) = 1 + max (height left) (height right)
-
-width :: BSTree a -> Int
-width Empty                  = 2
-width (Branch _ Empty Empty) = 3
-width (Branch _ left  Empty) = 2 + width left
-width (Branch _ Empty right) = 2 + width right
-width (Branch _ left  right) = width right + width right
 
 insert :: Ord a => BSTree a -> a -> BSTree a
 insert Empty x = Branch x Empty Empty
